@@ -1,8 +1,12 @@
 <script language="JavaScript" type="text/javascript">
 <!--
- 
  jQuery(document).ready(function($) {
-/* Toggles the class "hold-size" to be acted on by css*/
+
+$('input[type=radio]').click(function(){
+    $('#awqsf_search_form_1223')[0].submit();	
+		
+});
+$("input:radio").prop("checked", false);
 $('.search-list').click(function(){
      $(this).parent("li").toggleClass("hold-size");
 });
@@ -80,7 +84,6 @@ if(isset($options[0]['strchk']) && ($options[0]['strchk'] == '1') ){
                 echo '<br/></div>';
 }
 do_action('awqsf_fbottom',$id);
-//echo '<div class="awqsf_box"><p class="awqsf-button"><input type="submit" id="awqsf_submit" value="'.$options[0]['button'].'" alt="[Submit]" name="wqsfsubmit" title="Search" /></p></div>';
 				
 echo '</form>';
 
