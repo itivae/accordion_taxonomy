@@ -1,3 +1,16 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+ 
+ jQuery(document).ready(function($) {
+/* Toggles the class "hold-size" to be acted on by css*/
+$('.search-list').click(function(){
+     $(this).parent("li").toggleClass("hold-size");
+});
+});
+//-->
+</script>
+
+
 <?php
 $nonce = wp_create_nonce  ('awqsfsearch');
 $taxo = get_post_meta($id, 'awqsf-taxo', true);
@@ -62,12 +75,12 @@ if(!empty($cmf)){
 }
 
 if(isset($options[0]['strchk']) && ($options[0]['strchk'] == '1') ){
-		echo '<div class="awqsf_box"><center><label class="awqsf-label-keyword">'.$options[0]['strlabel'].'</center></label>';
+		echo '<div class="awqsf_box"><center><label class="awqsf-label-keyword">'.$options[0]['strlabel'].'</center></label>'.'<img src="images/test.jpg" alt="alt image"/>';
 		echo '<input id="awqsf_keyword" type="text" name="skeyword" value="" />';
                 echo '<br/></div>';
 }
 do_action('awqsf_fbottom',$id);
-echo '<div class="awqsf_box"><p class="awqsf-button"><input type="submit" id="awqsf_submit" value="'.$options[0]['button'].'" alt="[Submit]" name="wqsfsubmit" title="Search" /></p></div>';
+//echo '<div class="awqsf_box"><p class="awqsf-button"><input type="submit" id="awqsf_submit" value="'.$options[0]['button'].'" alt="[Submit]" name="wqsfsubmit" title="Search" /></p></div>';
 				
 echo '</form>';
 
