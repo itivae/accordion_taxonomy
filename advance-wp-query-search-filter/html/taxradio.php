@@ -7,7 +7,7 @@ if ( $count > 0 ){
 			
 			echo '<li class="searchl">';
 			echo '<h3 class="search-list">';
-	echo '<div class="awqsf_box taxoradio-'.$c.'"><label class="taxo-label-'.$c.'">'.$v['taxlabel'].'</label>&nbsp;&nbsp;<img src="/wp-content/themes/responsive-child-SRI/images/down.png" alt="down arrow"/><br>';
+	echo '<div class="awqsf_box taxoradio-'.$c.'"><label class="taxo-label-'.$c.'">'.$v['taxlabel'].'</label>&nbsp;&nbsp;<img src="/wp-content/plugins/advance-wp-query-search-filter/css/images/down.png" alt="down arrow"/><br>';
 		echo '</h3>';
 		echo '<div>';
 	echo '<input  type="hidden" name="taxo['.$c.'][name]" value="'.$v['taxname'].'">';
