@@ -11,7 +11,6 @@ if ( $count > 0 ){
 		echo '</h3>';
 		echo '<div>';
 	echo '<input  type="hidden" name="taxo['.$c.'][name]" value="'.$v['taxname'].'">';
-	//echo '<label class="taxradio"><input type="radio" id="taxo-'.$c.'" name="taxo['.$c.'][term]" value="wqsftaxoall" ',(isset($_GET['taxo'][$c]['term']) &&  $_GET['taxo'][$c]['term']=='wqsftaxoall') ? 'checked="checked"' : '','>'.$v['taxall'].'</label>';
 	
 	foreach ( $terms as $term ) {
 		$selected = '';
