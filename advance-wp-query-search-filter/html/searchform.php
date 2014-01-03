@@ -4,9 +4,12 @@ $taxo = get_post_meta($id, 'awqsf-taxo', true);
 $cmf = get_post_meta($id, 'awqsf-cmf', true);
 $options = get_post_meta($id, 'awqsf-relbool', true);
 echo '<div id="aqsfformid">';
+
 if($formtitle){
 echo '<span class="form_title">'.get_the_title($id).'</span>';}
 echo '<form method="get"  id="awqsf_search_form_'.$id.'" action="'.home_url( '/' ).'">';
+echo '<div class="verticalaccordion">';
+echo '<ul>';
 echo '<input type="hidden" name="s" value="'.$nonce.'" /><input type="hidden" name="formid" value="'.$id.'">';
 do_action('awqsf_fhead', $id);
 if(!empty($taxo)){
@@ -61,14 +64,13 @@ if(!empty($cmf)){
 if(isset($options[0]['strchk']) && ($options[0]['strchk'] == '1') ){
 		echo '<div class="awqsf_box"><center><label class="awqsf-label-keyword">'.$options[0]['strlabel'].'</center></label>';
 		echo '<input id="awqsf_keyword" type="text" name="skeyword" value="" />';
-                echo '<br></div>';
+                echo '<br/></div>';
 }
 do_action('awqsf_fbottom',$id);
 echo '<div class="awqsf_box"><p class="awqsf-button"><input type="submit" id="awqsf_submit" value="'.$options[0]['button'].'" alt="[Submit]" name="wqsfsubmit" title="Search" /></p></div>';
 				
 echo '</form>';
 
-
 echo '</div>';
-
+echo '</ul>';
 ?>
